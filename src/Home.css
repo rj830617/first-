@@ -1,0 +1,131 @@
+/* Home.css */
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --card-background: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .home-container {
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: math;
+  }
+  
+  .welcome-title {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 60px;
+  }
+  
+  .product-card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 10px 8px 10px #888888;
+  }
+  
+  .product-image {
+    width: 65%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    padding-top: 15px
+}
+
+  
+  .product-details {
+    padding: 1.5rem;
+  }
+  
+  .product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+  }
+  
+  .product-info {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+  }
+  
+  .add-to-cart-btn {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .add_to_card_test {
+     position: absolute;
+     bottom: 8px;
+     width: 100%;
+     padding: 5px;
+     margin-top: 10px;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #27ae60;
+  }
+  
+  @media (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .welcome-title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .home-container {
+      padding: 1rem;
+    }
+    
+    .product-grid {
+      grid-template-columns: 1fr;
+      margin-top: 4rem;
+    }
+  }
